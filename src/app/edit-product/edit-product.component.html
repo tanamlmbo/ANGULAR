@@ -1,0 +1,17 @@
+<p-card header="Edit Product">
+    <form [formGroup]="form" (ngSubmit)="saveProduct()">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" required>
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" formControlName="price" required>
+      </div>
+      <div>
+        <label for="category">Category:</label>
+        <input type="text" id="category" formControlName="category" required>
+      </div>
+      <p-button type="submit" label="Save" [disabled]="form.invalid"></p-button>
+    </form>
+  </p-card>
